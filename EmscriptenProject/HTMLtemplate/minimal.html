@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        canvas {
+            width: 640px;
+            height: 640px;
+            border: 2px solid Purple;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        // 处理窗口大小变化
+        window.addEventListener('resize', () => {
+            Module['canvas'].width = window.innerWidth * 0.8;
+            Module['canvas'].height = window.innerHeight * 0.8;
+        });
+    </script>
+    {{{ SCRIPT }}}
+</body>
+</html>

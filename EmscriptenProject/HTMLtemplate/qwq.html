@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Emscripten</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 添加 tabindex 属性确保 canvas 可聚焦 -->
+    <canvas id="canvas" tabindex="1"></canvas>
+
+    <!-- Emscripten 会将编译后的脚本自动注入到此处 -->
+    {{{ SCRIPT }}}
+
+    <script>
+        // 页面加载后让 canvas 自动聚焦，确保输入事件能传递到应用程序
+        window.onload = function() {
+          var canvas = document.getElementById('canvas');
+          canvas.focus();
+        };
+    </script>
+</body>
+</html>
