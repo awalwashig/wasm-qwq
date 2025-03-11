@@ -37,12 +37,14 @@
     <ClCompile>
       <EchoCommandLines>true</EchoCommandLines>
       <AdditionalOptions>-pthread %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\source\repos\EmscriptenProject\EmscriptenProject\include\spine-cpp\src\spine;C:\Users\Administrator\source\repos\EmscriptenProject\EmscriptenProject\include\spine-cpp\include\spine;C:\Users\Administrator\source\repos\EmscriptenProject\EmscriptenProject\include\spine-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\spine-cpp\dist\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalOptions>-s WASM=1 -s USE_WEBGL2=1   -s FULL_ES3=1   -s MIN_WEBGL_VERSION=2   -s MAX_WEBGL_VERSION=2   -s ALLOW_MEMORY_GROWTH=1   -s GL_PREINITIALIZED_CONTEXT=1 -s USE_SDL=2 %(AdditionalOptions)</AdditionalOptions>
       <HtmlShellFile>
       </HtmlShellFile>
+      <AdditionalLinkDirectories>C:\Program Files %28x86%29\spine-cpp\dist\lib;%(AdditionalLinkDirectories)</AdditionalLinkDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
